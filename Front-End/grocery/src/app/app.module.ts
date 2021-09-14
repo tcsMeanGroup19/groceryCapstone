@@ -13,6 +13,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserpanelComponent } from './userpanel/userpanel.component';
 import { RaiserequestComponent } from './raiserequest/raiserequest.component';
+import { EmployeepanelComponent } from './employeepanel/employeepanel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RaiserequestComponent } from './raiserequest/raiserequest.component';
     HomepageComponent,
     SignupComponent,
     UserpanelComponent,
-    RaiserequestComponent
+    RaiserequestComponent,
+    EmployeepanelComponent
   ],
   imports: [
     BrowserModule,
