@@ -1,8 +1,13 @@
 <mat-toolbar color="primary">
   
   <mat-toolbar color="primary">
-  <button type="button">Admin Login </button>
+    <a class="nav-link" [routerLink]= "['adminlogin']" routerLinkActive="active">
+      <button type="button">Admin Login </button>
+    </a>
+    <a class="nav-link" [routerLink]= "['userlogin']" routerLinkActive="active">
   <button type="button">User Login</button>
+</a>
+<a class="nav-link" [routerLink]= "['employeelogin']" routerLinkActive="active">
   <button type="button">Employee Login</button>
-  
+</a>
   </mat-toolbar>
