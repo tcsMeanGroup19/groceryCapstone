@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     CartComponent,
     EmployeeComponent,
     UserComponent,
-    HomepageComponent
+    HomepageComponent,
+    AdminpanelComponent
   ],
   imports: [
     BrowserModule,
