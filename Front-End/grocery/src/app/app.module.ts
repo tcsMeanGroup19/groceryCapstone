@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserpanelComponent } from './userpanel/userpanel.component';
+import { RaiserequestComponent } from './raiserequest/raiserequest.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserpanelComponent } from './userpanel/userpanel.component';
     UserComponent,
     HomepageComponent,
     SignupComponent,
-    UserpanelComponent
+    UserpanelComponent,
+    RaiserequestComponent
   ],
   imports: [
     BrowserModule,
