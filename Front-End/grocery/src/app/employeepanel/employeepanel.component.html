@@ -53,6 +53,19 @@
  
   
     <mat-card class="card">
-
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Request</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let ticket of tickets">
+            <td> {{ ticket.username }}</td>
+            <td> {{ ticket.request }}</td>
+          </tr>
+        </tbody>
+      </table>
     </mat-card>
 </mat-tab>

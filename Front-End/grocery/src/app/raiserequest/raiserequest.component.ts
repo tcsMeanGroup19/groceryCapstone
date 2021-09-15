@@ -24,11 +24,13 @@ export class RaiserequestComponent implements OnInit {
  
     this.raiseRequestService.raiseTicket(raiseRequest).
     subscribe(result=> {
-      if(result=="Success"){
+
+        alert("ticket sent");
         this.router.navigate(["userlogin"]);
-      }else {
+      
+
           this.msg = result;
-      }
+
     });
  
     this.raiseRequestRef.reset();

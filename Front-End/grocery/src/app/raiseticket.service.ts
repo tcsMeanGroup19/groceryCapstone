@@ -14,4 +14,9 @@ export class RaiseticketService {
     return this.http.post("http://localhost:9090/api/requests",RaiseTicket,
     {responseType:'text'});
   }
+
+  getTickets():Observable<any>{
+    return this.http.get("http://localhost:9090/api/requests",
+    {responseType:'json'});
+  }
 }
