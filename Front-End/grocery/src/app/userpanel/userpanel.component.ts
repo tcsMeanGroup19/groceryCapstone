@@ -12,4 +12,8 @@ export class UserpanelComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkOrderStatus(){
+
+  }
+  
 }
