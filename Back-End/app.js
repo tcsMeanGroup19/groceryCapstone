@@ -3,6 +3,7 @@ let bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 let cors = require("cors");
 let requestRouter = require("./Routers/request.router");
+let productRouter = require("./Routers/product.router");
 
 // create the reference of express 
 let app = express();
@@ -12,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json())
 
 //url database 
-let url = "mongodb://localhost:27017/tcsmean"
+let url = "mongodb://localhost:27017/Grocery"
 
 
 mongoose.connect(url).then(res=>console.log("connected")).catch(error=>console.log(error));
@@ -23,5 +24,7 @@ mongoose.connect(url).then(res=>console.log("connected")).catch(error=>console.l
 
 
 app.use("/api/requests",requestRouter);
+app.use("/api/product",productRouter);
+
 
 app.listen(9090,()=>console.log("Server running on port number 9090"))
