@@ -44,3 +44,28 @@
   
       </mat-card>
 </mat-tab>
+
+<!--  -->
+
+<mat-tab label="View User Tickets">
+  <br>
+  
+ 
+  
+    <mat-card class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let ticket of tickets">
+            <td> {{ ticket.username }}</td>
+            <td> {{ ticket.request }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+</mat-tab>

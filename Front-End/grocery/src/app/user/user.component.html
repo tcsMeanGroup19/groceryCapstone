@@ -20,7 +20,10 @@
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <a href="/userpanel">
+      <input type="button" class="fadeIn fourth" value="Log In"></a> 
+      <!-- link this to userpanel  -->
+      <!-- work on the backend for signin and signup for user  -->
       <a href="/raiserequest">
         <input type="button" class="fadeIn fifth" value="Raise request" >
       </a>
@@ -30,7 +33,14 @@
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Sign-Up</a>
+      
+        <a class="underlineHover" href="signup">Sign-Up</a>
+          <a class="nav-Link" [routerLink]= "['signup']" routerLinkActive="active"></a>
+       
+        <!-- <a class="nav-link" [routerLink]= "['signup']" routerLinkActive="active">
+          <button type="formFooter">Sign-Up</button>
+        </a> -->
+     
     </div>
 
   </div>

@@ -17,14 +17,15 @@
     </div> -->
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-      <input type="text" id="reason" class="fadeIn third" name="login" placeholder="reason">
 
-        <input type="submit" class="fadeIn fifth" value="Raise request" >
-      
+    <form [formGroup]="raiseRequestRef" (ngSubmit)="raiseTicket()">
 
-    </form>
+      <input type="text" formControlName="username" placeholder="username" class="fadeIn second" />
+
+      <input type="text" formControlName="request" placeholder="request"  class="fadeIn third" />
+      <input type="submit" value="Raise Ticket"/>
+     
+  </form>
   </div>
 </div>
 </div>

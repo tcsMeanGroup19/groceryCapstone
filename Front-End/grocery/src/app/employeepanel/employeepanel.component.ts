@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RaiseticketService } from '../raiseticket.service';
 
 @Component({
   selector: 'app-employeepanel',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employeepanel.component.css']
 })
 export class EmployeepanelComponent implements OnInit {
-
-  constructor() { }
+  tickets: {username: string, request: string, _id: string}[] = []
+  constructor(public raiseRequestService:RaiseticketService) {
+    this.raiseRequestService.getTickets()
+    .subscribe(result=> {
+      this.tickets = result
+    });
+  }
 
   ngOnInit(): void {
   }
