@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { from } from 'rxjs';
 import { AdminService } from '../admin.service';
+import {EmployeeService} from '../employee.service';
 @Component({
   selector: 'app-adminpanel',
   templateUrl: './adminpanel.component.html',
@@ -16,8 +18,37 @@ export class AdminpanelComponent implements OnInit {
   deleteRef = new FormGroup({
     _id:new FormControl(),
   })
-  constructor(public adminSer:AdminService
+
+  addemp = new FormGroup({
+    _id:new FormControl(),
+    name:new FormControl(),
+    email:new FormControl(),
+    
+  })
+
+  deleteemp = new FormGroup({
+    _id:new FormControl(),
+  })
+
+
+  constructor(public adminSer:AdminService, public EmpSer:EmployeeService
     ) { }
+    addemployee(){
+      let empcut = this.addemp.value;
+      console.log(empcut);
+       this.EmpSer.addemployeeDetails(empcut).
+       subscribe(result=>this.msgs=result,error=>console.log(error));
+       this.addemp.reset();
+       alert("The Employee has been added successfully")
+    }
+  
+    deleteemployee(){
+      let employee = this.deleteemp.value;
+      this.EmpSer.deleteemployeeDetails(employee._id).
+      subscribe(result=>this.msgs=result,error=>console.log(error));
+      this.deleteemp.reset();
+      alert("The Employee has been deleted successfully")
+    }
 
     msgs?:string;
 
@@ -33,14 +64,6 @@ export class AdminpanelComponent implements OnInit {
      this.addRef.reset();
      alert("The product added successfully")
   }
-  addemployee(){
-    let prodcut = this.addRef.value;
-    console.log(prodcut);
-     this.adminSer.addproductDetails(prodcut).
-     subscribe(result=>this.msgs=result,error=>console.log(error));
-     this.addRef.reset();
-     alert("The Employee was successfully added")
-  }
 
   deleteproduct(){
     let product = this.deleteRef.value;
@@ -49,13 +72,9 @@ export class AdminpanelComponent implements OnInit {
     this.deleteRef.reset();
     alert("The product deleted successfully")
   }
-  deleteemployee(){
-    let product = this.deleteRef.value;
-    this.adminSer.deleteproductDetails(product._id).
-    subscribe(result=>this.msgs=result,error=>console.log(error));
-    this.deleteRef.reset();
-    alert("The employee was successfully deleted")
-  }
+
+  
+  
   updateRef = new FormGroup({
     _id:new FormControl(),
     qty:new FormControl(),
