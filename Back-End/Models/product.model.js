@@ -5,7 +5,6 @@ mongoose.pluralize(null);
 let productSchema = mongoose.Schema({
     _id : Number,
     name : String,
-    brand : String,
     qty : Number,
     price : Number,
   
