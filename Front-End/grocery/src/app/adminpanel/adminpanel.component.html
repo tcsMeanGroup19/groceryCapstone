@@ -87,7 +87,7 @@
 <!--  -->
     <mat-tab label="Add Employee">
         <br>
-        <form [formGroup]="updateRef">
+        <form [formGroup]="addRef">
             
           <label for="pname">Employee id:</label><br>
           <input type="text" id="Pname" formControlName="_id"
@@ -96,12 +96,21 @@
           <label for="pname">Employee name:</label><br>
           <input type="text" id="Pname" formControlName="name"
           name="Pname"><br>
-          
+
+
           <label for="pname">Employee email:</label><br>
-          <input type="text" id="Pname" formControlName="price"
+          <input type="email" id="pname" formControlName="name"
           name="Pname"><br>
-          <input type="submit" class="fadeIn fourth" (click)="updateproduct()" value="Add Employee">
-          </form>
+       
+        
+      
+          <label for="fname">Employee phone number:</label><br>
+          <input type="number" formControlName="price"
+          id="fname" name="fname"><br>
+         <br/>
+      
+      <input type="submit" class="fadeIn fourth" (click)="addproduct()" value="Add Employee">
+    </form>
        
         
           <mat-card class="card">
