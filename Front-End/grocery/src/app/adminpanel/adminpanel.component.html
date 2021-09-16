@@ -109,7 +109,7 @@
           id="fname" name="fname"><br>
          <br/>
       
-      <input type="submit" class="fadeIn fourth" (click)="addproduct()" value="Add Employee">
+      <input type="submit" class="fadeIn fourth" (click)="addemployee()" value="Add Employee">
     </form>
        
         
@@ -120,6 +120,14 @@
 
     <mat-tab label="Delete Employee">
         <br>
+        <form [formGroup]="deleteRef">
+            
+          <label for="pname">Employee id:</label><br>
+          <input type="text" id="Pname" formControlName="_id"
+          name="Pname"><br>
+          <input type="submit" class="fadeIn fourth" (click)=" deleteproduct()" value="Delete Item">
+          </form>
+       
         
        
         

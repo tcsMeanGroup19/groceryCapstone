@@ -33,6 +33,15 @@ export class AdminpanelComponent implements OnInit {
      this.addRef.reset();
      alert("The product added successfully")
   }
+  addemployee(){
+    let prodcut = this.addRef.value;
+    console.log(prodcut);
+     this.adminSer.addproductDetails(prodcut).
+     subscribe(result=>this.msgs=result,error=>console.log(error));
+     this.addRef.reset();
+     alert("The Employee was successfully added")
+  }
+
   deleteproduct(){
     let product = this.deleteRef.value;
     this.adminSer.deleteproductDetails(product._id).
