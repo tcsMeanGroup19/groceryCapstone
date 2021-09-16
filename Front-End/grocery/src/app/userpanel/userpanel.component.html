@@ -15,21 +15,20 @@
     <mat-tab label="Order Status">
         <br>
         
-       
-        
           <mat-card class="card">
-      
+            <button mat-raised-button (click)="checkOrderStatus()">Check Order Status</button>
+
           </mat-card>
     </mat-tab>
 
 <!--  -->
-    <mat-tab label=" Edit Profile">
+    <mat-tab label="Edit Profile">
         <br>
         
        
         
           <mat-card class="card">
-      
+            <button mat-raised-button (click)="editProfile()">Edit Profile</button>
           </mat-card>
     </mat-tab>
     
@@ -41,6 +40,7 @@
    
     
       <mat-card class="card">
-  
+        <button mat-raised-button (click)="showFunds()">Show Funds</button>
+        <button mat-raised-button (click)="addFunds()">Add Funds</button>
       </mat-card>
 </mat-tab>
