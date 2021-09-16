@@ -1,46 +1,70 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <mat-tab-group animationDuration="0ms">
-    <mat-tab label="Shopping">
-        <br>
-        
-       
-        
-          <mat-card class="card">
-      
-          </mat-card>
-    </mat-tab>
-
-<!--  -->
-    <mat-tab label="Order Status">
-        <br>
-        
-       
-        
-          <mat-card class="card">
-      
-          </mat-card>
-    </mat-tab>
-
-<!--  -->
-    <mat-tab label=" Edit Profile">
-        <br>
-        
-       
-        
-          <mat-card class="card">
-      
-          </mat-card>
-    </mat-tab>
-    
-<!--  -->
-
-<mat-tab label="Funds">
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="Shopping">
     <br>
-    
-   
-    
-      <mat-card class="card">
-  
-      </mat-card>
-</mat-tab>
+
+    <mat-card class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td> {{ product.name }}</td>
+            <td> {{ product.qty }}</td>
+            <td> {{ product.price }} </td>
+            <td><a href="/cart">
+                <input type="button" class="fadeIn fifth" value="Add to cart">
+              </a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </mat-card>
+
+
+
+
+    <mat-card class="card">
+
+    </mat-card>
+  </mat-tab>
+
+  <!--  -->
+  <mat-tab label="Order Status">
+    <br>
+
+
+
+    <mat-card class="card">
+
+    </mat-card>
+  </mat-tab>
+
+  <!--  -->
+  <mat-tab label=" Edit Profile">
+    <br>
+
+
+
+    <mat-card class="card">
+
+    </mat-card>
+  </mat-tab>
+
+  <!--  -->
+
+  <mat-tab label="Funds">
+    <br>
+
+
+
+    <mat-card class="card">
+
+    </mat-card>
+  </mat-tab>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-userpanel',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userpanel.component.css']
 })
 export class UserpanelComponent implements OnInit {
-
-  constructor() { }
+  products: {name: string, price: Number, qty:number}[] = []
+  constructor(public adminSer:AdminService) { 
+    this.adminSer.getproductDetails().subscribe(result=> {
+      this.products = result
+    });
+  
+  }
+  
 
   ngOnInit(): void {
   }
