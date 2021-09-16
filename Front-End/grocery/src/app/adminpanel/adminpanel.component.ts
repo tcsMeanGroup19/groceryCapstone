@@ -49,6 +49,13 @@ export class AdminpanelComponent implements OnInit {
     this.deleteRef.reset();
     alert("The product deleted successfully")
   }
+  deleteemployee(){
+    let product = this.deleteRef.value;
+    this.adminSer.deleteproductDetails(product._id).
+    subscribe(result=>this.msgs=result,error=>console.log(error));
+    this.deleteRef.reset();
+    alert("The employee was successfully deleted")
+  }
   updateRef = new FormGroup({
     _id:new FormControl(),
     qty:new FormControl(),
