@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AdminService } from '../admin.service';
+import { EmployeerequestService } from '../employeerequest.service';
 @Component({
   selector: 'app-adminpanel',
   templateUrl: './adminpanel.component.html',
@@ -19,8 +20,10 @@ export class AdminpanelComponent implements OnInit {
     _id: new FormControl(),
   })
 
-  constructor(public adminSer: AdminService
-  ) { }
+  requests: {employeeusername: string, Erequest: string}[] = []
+  constructor(public adminSer: AdminService, public employeeSer:EmployeerequestService ) {this.employeeSer.employeegetTickets().subscribe(result=> {
+    this.requests = result
+  }); }
 
   msgs?: string;
 

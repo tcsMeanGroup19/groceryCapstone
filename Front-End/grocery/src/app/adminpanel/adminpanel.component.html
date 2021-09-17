@@ -71,9 +71,24 @@
   <mat-tab label="View request">
     <br>
 
-
-
+    
     <mat-card class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>employee name</th>
+          <th>reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let request of requests">
+          <td> {{ request.employeeusername }}</td>
+          <td> {{ request.Erequest }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+
 
     </mat-card>
   </mat-tab>

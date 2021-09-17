@@ -3,7 +3,23 @@
   <mat-tab-group animationDuration="0ms">
     <mat-tab label="Send Request">
         <br>
+        <div>
+     
+          <div class="wrapper fadeInDown">
+            <div id="formContent">
+         
         
+              <form [formGroup]="employeeraiseRequestRef" (ngSubmit)="employeeraiseTicket()">
+        
+                <input type="text" formControlName="employeeusername" placeholder="employee username" class="fadeIn second" />
+        
+                <input type="text" formControlName="Erequest" placeholder="employee request" class="fadeIn third" />
+                <input type="submit" value="Raise Request" />
+        
+              </form>
+            </div>
+          </div>
+        </div>
        
         
           <mat-card class="card">
