@@ -58,12 +58,13 @@ export class UserpanelComponent implements OnInit {
   addFunds(){
     this.msg = "adding funds";
     let newFunds = this.fundRef.value;
-    this.userService.addUserFunds(newFunds).subscribe(result=>{
-      this.msg = result;
-    }, error=>console.log(error));
+    //this.userService.addUserFunds(newFunds).subscribe(result=>{
+    //  this.msg = result;
+    //}, error=>console.log(error));
+    this.funds = newFunds.funds;
     this.fundRef.reset();
     // call showFunds at the end to update it
-    this.showFunds();
+    //this.showFunds();
   }
   
 }
