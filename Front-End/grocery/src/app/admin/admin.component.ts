@@ -7,17 +7,28 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
+  alert:boolean = false;
+  username:string = "";
+  password: string = ""
+
   constructor(public router:Router) { }
 
   ngOnInit(): void {
   }
 
-test(){
-  this.router.navigate(["employee"]);
-}
+  logIn(){
+    if(this.username == "admin" && this.password == "admin"){
+      this.router.navigate(["adminpanel"]);
 
-  addAdmin(){
-    
+      //Navigate to Page
+    }
+    else{
+      alert("Please enter valid details");
+    }
+
+
+
   }
+
 
 }
