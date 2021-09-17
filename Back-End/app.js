@@ -4,6 +4,7 @@ let mongoose = require("mongoose");
 let cors = require("cors");
 let requestRouter = require("./Routers/request.router");
 let productRouter = require("./Routers/product.router");
+let employeerequestRouter = require("./Routers/employeerequest.router");
 
 // create the reference of express 
 let app = express();
@@ -24,6 +25,7 @@ mongoose.connect(url).then(res=>console.log("connected")).catch(error=>console.l
 
 
 app.use("/api/requests",requestRouter);
+app.use("/api/Employeerequests",employeerequestRouter);
 app.use("/api/product",productRouter);
 
 

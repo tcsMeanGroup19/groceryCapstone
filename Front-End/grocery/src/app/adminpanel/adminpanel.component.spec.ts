@@ -8,9 +8,9 @@ describe('AdminpanelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminpanelComponent ]
+      declarations: [AdminpanelComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

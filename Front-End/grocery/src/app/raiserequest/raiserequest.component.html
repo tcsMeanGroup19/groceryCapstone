@@ -1,31 +1,31 @@
 <div>
-    <!-- <input type="button" value="add admin"/> -->
+  <!-- <input type="button" value="add admin"/> -->
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="raiserequest.component.css">
-<!------ Include the above in your HEAD tag ---------->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="raiserequest.component.css">
+  <!------ Include the above in your HEAD tag ---------->
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
 
-    <!-- Icon -->
-    <!-- <div class="fadeIn first">
+      <!-- Icon -->
+      <!-- <div class="fadeIn first">
       <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
     </div> -->
 
-    <!-- Login Form -->
+      <!-- Login Form -->
 
-    <form [formGroup]="raiseRequestRef" (ngSubmit)="raiseTicket()">
+      <form [formGroup]="raiseRequestRef" (ngSubmit)="raiseTicket()">
 
-      <input type="text" formControlName="username" placeholder="username" class="fadeIn second" />
+        <input type="text" formControlName="username" placeholder="username" class="fadeIn second" />
 
-      <input type="text" formControlName="request" placeholder="request"  class="fadeIn third" />
-      <input type="submit" value="Raise Ticket"/>
-     
-  </form>
+        <input type="text" formControlName="request" placeholder="request" class="fadeIn third" />
+        <input type="submit" value="Raise Ticket" />
+
+      </form>
+    </div>
   </div>
-</div>
 </div>
